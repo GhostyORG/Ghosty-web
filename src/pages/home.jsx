@@ -1,6 +1,7 @@
 // Imports
 import React from "react";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 // Custom Imports
 import logo from "../images/ghosty_logo.jpg";
 import { initHome } from "../scripts/js";
@@ -15,7 +16,12 @@ const CANONICAL = config.SITE_DOMAIN + "/;";
 // Home component
 export default function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layout
+    >
       <Helmet>
         <title>{TITLE}</title>
         <link rel="canonical" href={CANONICAL} />
@@ -44,6 +50,6 @@ export default function Home() {
 
       {/* Scripts */}
       {initHome()}
-    </div>
+    </motion.div>
   );
 }
