@@ -31,7 +31,7 @@ export default function Home() {
               </div>
               <div className="col order-1 order-lg-2 order-md-2">
                 <img
-                  className="ghosty-logo rounded mx-auto d-block"
+                  className="ghosty-logo rounded-5 mx-auto d-block"
                   src={logo}
                   alt="Ghosty Organization Logo"
                 />

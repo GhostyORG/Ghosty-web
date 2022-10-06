@@ -23,7 +23,7 @@ export default function About() {
         <section>
           <div className="row my-5">
             <div className="col-sm-12 col-md-6 col-lg-6 rounded mx-auto d-block ghosty-container">
-              <img src={logo} alt="Ghosty Dev Logo" />
+              <img src={logo} className="rounded-5" alt="Ghosty Dev Logo" />
             </div>
             <div className="col-sm-12 col-md-6 col-lg-6 my-3">
               <h1 className="h1 titleText">About Us</h1>
