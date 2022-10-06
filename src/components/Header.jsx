@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/css/custom/header.min.css";
+import "../styles/scss/header.scss";
 import moonIcon from "../images/dark_mode.png";
 import sunIcon from "../images/light_mode.png";
 import { useEffect } from "react";

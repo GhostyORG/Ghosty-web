@@ -4,7 +4,7 @@ Date: 15/8/22
  */
 
 import React from "react";
-import "../styles/css/custom/error.min.css";
+import "../styles/scss/error.scss";
 
 export default function Error() {
   return (

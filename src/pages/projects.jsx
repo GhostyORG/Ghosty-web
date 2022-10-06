@@ -3,7 +3,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 // Custom imports
 import { projectsFetch } from "../scripts/js/projects";
-import "../styles/css/custom/projects.min.css";
+import "../styles/scss/projects.scss";
 import config from "../config.json";
 import pagesDesc from "../data/pageDesc.json";
 

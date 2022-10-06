@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import logo from "../images/ghosty_logo.jpg";
 import config from "../config.json";
 import pagesDesc from "../data/pageDesc.json";
-import "../styles/css/custom/about.min.css";
+import "../styles/scss/about.scss";
 
 // Driver codes
 const TITLE = "About | " + config.SITE_TITLE;

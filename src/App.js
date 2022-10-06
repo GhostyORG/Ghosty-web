@@ -6,7 +6,7 @@ import About from "./pages/about";
 import Projects from "./pages/projects";
 import Members from "./pages/members";
 // Stylessheets
-import "./styles/css/custom/index.min.css";
+import "./styles/scss/index.scss";
 // import "./styles/css/custom/variables.min.css";
 // BootStrap 5.2
 import "bootstrap/dist/css/bootstrap.min.css";
