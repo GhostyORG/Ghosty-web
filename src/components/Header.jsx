@@ -47,25 +47,32 @@ export default function Header() {
           </a>
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <NavLink
-                className="nav-link tab-links"
-                exact
-                aria-current="page"
-                to="/"
-              >
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link tab-links"
+                  end="true"
+                  aria-current="page"
+                  to="/">
                 Home
               </NavLink>
-              <NavLink className="nav-link tab-links" to="/projects">
-                Projects
-              </NavLink>
-              <NavLink className="nav-link tab-links" to="/members">
-                Members
-              </NavLink>
-              <NavLink className="nav-link tab-links" to="/about">
-                About
-              </NavLink>
-            </div>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link tab-links" to="/projects">
+                  Projects
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link tab-links" to="/members">
+                  Members
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link tab-links" to="/about">
+                  About
+                </NavLink>
+              </li>
+            </ul>
           </div>
 
           <div className="theme">
