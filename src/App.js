@@ -1,10 +1,6 @@
 // Imports
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// Pages
-import Home from "./pages/home";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Members from "./pages/members";
+import { BrowserRouter as Router } from "react-router-dom";
+
 // Stylessheets
 import "./styles/css/custom/index.min.css";
 // import "./styles/css/custom/variables.min.css";
@@ -14,7 +10,7 @@ import "bootstrap/dist/js/bootstrap";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Error from "./pages/error";
+import AnimatedRoutes from "./routes/animatedRoutes";
 
 // main Functional Component which renders everything
 function App() {
@@ -22,14 +18,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/members" element={<Members />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </Router>
     </div>
