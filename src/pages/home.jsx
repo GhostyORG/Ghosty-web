@@ -17,9 +17,10 @@ const CANONICAL = config.SITE_DOMAIN + "/;";
 export default function Home() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, x: -200, y: 0 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      exit={{ opacity: 0, x: 0, y: -100 }}
+      transition={{ duration: 1 }}
       layout
     >
       <Helmet>
