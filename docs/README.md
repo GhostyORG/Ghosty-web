@@ -43,6 +43,10 @@ Or using **yarn**
 yarn start
 ```
 
+## Our Public Email
+
+We now have a email! Contact us if you need help, want to report a bug or is requesting data deletion! ghostydevz@gmail.com
+
 ## Contributing
 
 To contribute to this project please read the contributing guidelines from [here](./CONTRIBUTING.md)
