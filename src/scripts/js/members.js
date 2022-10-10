@@ -20,6 +20,10 @@ const memberData = [
   {
       login: "virtual-designer",
       role: "Developer"
+  },
+  {
+      login: "elbayxsv",
+      role: "Developer"
   }
 ];
 
