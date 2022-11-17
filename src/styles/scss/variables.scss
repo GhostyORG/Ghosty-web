@@ -15,7 +15,7 @@ $default_blue: #0066ff;
 :root {
   --black: black;
   --link_color: inherit;
-  --blue: #{$halloween_blue}; // change this line to switch theme colors
+  --blue: #{$default_blue}; // change this line to switch theme colors
   --light-blue: rgb(204, 199, 244);
   --header: white;
   --footer: white;
