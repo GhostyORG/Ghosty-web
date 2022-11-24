@@ -68,25 +68,15 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="theme">
-            {darkmode ? (
-              <img
-                src={sunIcon}
+            <button className="theme">
+            <img
+                src={darkmode ? sunIcon : moonIcon}
                 alt="Mode Switcher"
                 onClick={() => {
                   setDarkmode(!darkmode);
                 }}
               />
-            ) : (
-              <img
-                src={moonIcon}
-                alt="Mode Switcher"
-                onClick={() => {
-                  setDarkmode(!darkmode);
-                }}
-              />
-            )}
-          </div>
+            </button>
         </div>
       </nav>
     </div>
