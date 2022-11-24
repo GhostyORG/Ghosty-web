@@ -11,12 +11,12 @@ $medium: 900px;
 
 $halloween_blue: #b37835;
 $default_blue: #0066ff;
-$christmas_red: #eb4034;
+$christmas_blue: #191970;
 
 :root {
   --black: black;
   --link_color: inherit;
-  --blue: #{$christmas_red}; // change this line to switch theme colors
+  --blue: #{$christmas_blue}; // change this line to switch theme colors
   --light-blue: rgb(204, 199, 244);
   --header: white;
   --footer: white;
