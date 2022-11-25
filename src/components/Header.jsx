@@ -1,35 +1,16 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/scss/header.scss";
 import moonIcon from "../images/dark_mode.png";
 import sunIcon from "../images/light_mode.png";
-import { useEffect } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { ACTIONS } from "../context/actions/Theme";
 
 export default function Header() {
-  const [darkmode, setDarkmode] = React.useState(false);
+  const {darkmode, dispatch} = useContext(ThemeContext);
 
-  if (darkmode) {
-    console.log("Darkmode is enabled now");
-    document.getElementById("navbar").classList.add("navbar-dark");
-    document.body.classList.add("darkmode");
-  }
-  if (!darkmode) {
-    console.log("Light Mode is enabled now");
-    if (document.body.classList.contains("darkmode")) {
-      document.getElementById("navbar").classList.remove("navbar-dark");
-      document.body.classList.remove("darkmode");
-    }
-  }
-
-  // Automatic switch mode based on OS theme
-  useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? setDarkmode(true)
-      : setDarkmode(false);
-  }, []);
-  return (
-    <div>
-      <nav className="navbar navbar-expand-lg nav-container " id="navbar">
+  return (<div className="content">
+      <nav className={`navbar navbar-expand-lg nav-container ${darkmode ? "navbar-dark" : ""}`}>
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -73,12 +54,12 @@ export default function Header() {
                 src={darkmode ? sunIcon : moonIcon}
                 alt="Mode Switcher"
                 onClick={() => {
-                  setDarkmode(!darkmode);
+                  dispatch({type: darkmode ? ACTIONS.LIGHTMODE : ACTIONS.DARKMODE});
                 }}
               />
             </button>
         </div>
       </nav>
-    </div>
+      </div>
   );
 }

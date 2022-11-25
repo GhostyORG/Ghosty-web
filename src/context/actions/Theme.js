@@ -1,0 +1,4 @@
+export const ACTIONS = {
+    DARKMODE: "DARKMODE",
+    LIGHTMODE: "LIGHTMODE"
+}
