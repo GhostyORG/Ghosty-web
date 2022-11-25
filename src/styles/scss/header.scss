@@ -5,40 +5,42 @@ Date: 8/15/2022
 */
 @import "variables.scss";
 
-.nav-container {
-  background-color: var(--header, white);
-  box-shadow: 2px 2px 20px var(--shadow);
-  border-radius: 10px;
+.content{
   padding: 10px;
-  margin: 10px;
-
-  .theme {
-      background: none;
-      padding: 2px;
-      border: none;
-    img {
-      cursor: pointer;
-      height: 30px;
-    }
-  }
-
-  .tab-links {
-    // color: var(--blue);
-    font-weight: bolder;
+  .nav-container {
+    background-color: var(--header, white);
+    box-shadow: 2px 2px 20px var(--shadow);
+    border-radius: 10px;
     padding: 10px;
-    font-size: large;
-    transition: 0.3s ease-in;
-    &:hover {
-      // text-decoration: underline;
+  
+    .theme {
+        background: none;
+        padding: 2px;
+        border: none;
+      img {
+        cursor: pointer;
+        height: 30px;
+      }
+    }
+  
+    .tab-links {
+      // color: var(--blue);
+      font-weight: bolder;
+      padding: 10px;
+      font-size: large;
+      transition: 0.3s ease-in;
+      &:hover {
+        // text-decoration: underline;
+        box-shadow: inset 100px 0 0 0 var(--blue);
+        color: white;
+        border-radius: 20px;
+      }
+    }
+  
+    .active {
       box-shadow: inset 100px 0 0 0 var(--blue);
-      color: white;
       border-radius: 20px;
     }
-  }
-
-  .active {
-    box-shadow: inset 100px 0 0 0 var(--blue);
-    border-radius: 20px;
   }
 }
 

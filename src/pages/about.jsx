@@ -27,7 +27,7 @@ export default function About() {
         <meta name="description" content={DESC} />
       </Helmet>
       <div className="container-sm">
-        <section>
+        <section className="about">
           <div className="row my-5">
             <div className="col-sm-12 col-md-6 col-lg-6 rounded mx-auto d-block ghosty-container">
               <img src={logo} className="rounded-5" alt="Ghosty Dev Logo" />

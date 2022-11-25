@@ -11,11 +11,14 @@ import "bootstrap/dist/js/bootstrap";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AnimatedRoutes from "./routes/animatedRoutes";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
 // main Functional Component which renders everything
 function App() {
+  const { darkmode } = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className={`App ${darkmode ? "darkmode" : ""}`}>
       <Router>
         <Header />
         <AnimatedRoutes />
