@@ -40,7 +40,7 @@ export default function Footer() {
                 <li>
                   <NavLink
                     className="nav-link"
-                    exact
+                    exact="true"
                     aria-current="page"
                     to="/"
                   >

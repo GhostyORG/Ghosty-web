@@ -1,9 +1,9 @@
 // Imports
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import { Octokit } from "@octokit/rest";
 // Custom imports
-import { projectsFetch } from "../scripts/js/projects";
 import "../styles/scss/projects.scss";
 import config from "../config.json";
 import pagesDesc from "../data/pageDesc.json";
@@ -14,6 +14,29 @@ const DESC = pagesDesc.ProjectsDesc;
 const CANONICAL = config.SITE_DOMAIN + "/;";
 // Projects Component
 export default function Projects() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    let ignore = false;
+    const octokit = new Octokit();
+
+    // Compare: https://docs.github.com/en/rest/reference/repos/#list-organization-repositories
+
+    async function fetchData() {
+      const result = await octokit.rest.repos.listForOrg(
+        {
+          org: "GhostyORG",
+          type: "public",
+        }
+      )
+
+      if (!ignore) setData(result.data);
+    }
+
+    fetchData();
+    return () => { ignore = true; }
+  }, [])
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 0, y: -100 }}
@@ -32,11 +55,22 @@ export default function Projects() {
           <h1 className="h1 text-center">Our Projects</h1>
 
           {/* Show the GhostyORG projects here using github API */}
-          <div id="orgProjects"></div>
+          <div id="orgProjects">
+            <ul>
+              {data.map(project => (
+                <li key={project.id}>
+                  <a href={project.html_url}>
+                    {project.name}
+                  </a>
+                  <div>
+                    {project.description}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       </div>
-      {/* Custom JS */}
-      {projectsFetch()}
     </motion.div>
   );
 }
